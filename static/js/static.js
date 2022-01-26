@@ -12,3 +12,4 @@ window.onclick = function(e){
         menu.style.display = 'none'
         console.log('outside target', e.target)
 }
+console.log('Script loaded succesfully')

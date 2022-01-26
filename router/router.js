@@ -25,7 +25,7 @@ const main = async () => {
     }
 }
 main()
-const onNavClick = (pathname) => {
+function onNavClick(pathname){
     window.history.replaceState(
         {},
         pathname,
