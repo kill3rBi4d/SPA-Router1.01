@@ -41,11 +41,11 @@ window.onpopstate = () => {
 }
 
 // navigator
-const navigateStyle = (pathname) => {
-    const dashBtn = document.getElementById('dash-btn'),
+const dashBtn = document.getElementById('dash-btn'),
         mesbtn = document.getElementById('mes-btn'),
-        setBtn = document.getElementById('set-btn');
-        
+        setBtn = document.getElementById('set-btn')
+
+const navigateStyle = (pathname) => {
         if(pathname === '/' || pathname == '/index.html'){
             dashBtn.classList.add('active')
             mesbtn.classList.remove('active')
@@ -62,4 +62,23 @@ const navigateStyle = (pathname) => {
             mesbtn.classList.remove('active')
         }
 }
+
+const navigate = () => {
+    dashBtn.addEventListener('click', () => {
+        onNavClick('/')
+        return false
+    })
+    mesbtn.addEventListener('click', () => {
+        onNavClick('/messeges')
+        return false
+    })
+    setBtn.addEventListener('click', () => {
+        onNavClick('/settings')
+        return false
+    })
+}
+navigate()
+
+console.log('Script loaded succesfully')
+
 
